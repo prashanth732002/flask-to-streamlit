@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Role Merge Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/background.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding-top: 50px;
+            color: white;
+        }
+        .container {
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        input, button {
+            margin: 10px;
+        }
+        button {
+            background: #4CAF50;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Upload Files to Merge Roles</h2>
+        <form action="/process" method="POST" enctype="multipart/form-data">
+            <label>Branch File (with AM/DM/RM/SH columns):</label><br>
+            <input type="file" name="file1" required><br>
+            <label>Employee Status File:</label><br>
+            <input type="file" name="file2" required><br>
+            <button type="submit">Process & Download</button>
+        </form>
+    </div>
+</body>
+</html>
